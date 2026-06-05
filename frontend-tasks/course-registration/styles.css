@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8fafc;
+}
+
+.hero {
+  background: linear-gradient(rgba(15, 23, 42, .72), rgba(15, 23, 42, .72)), url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=80") center/cover;
+  color: white;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+.course-img,
+.faculty-img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.map-box {
+  min-height: 280px;
+  background: repeating-linear-gradient(45deg, #e2e8f0, #e2e8f0 12px, #f8fafc 12px, #f8fafc 24px);
+  display: grid;
+  place-items: center;
+}
+
+footer a {
+  color: #bfdbfe;
+  text-decoration: none;
+}

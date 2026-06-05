@@ -1,0 +1,54 @@
+:root {
+  --brand: #14532d;
+  --accent: #f59e0b;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7faf8;
+}
+
+.navbar-brand span {
+  width: 38px;
+  height: 38px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #111827;
+  font-weight: 700;
+}
+
+.hero {
+  background: linear-gradient(rgba(20, 83, 45, .76), rgba(20, 83, 45, .76)), url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1400&q=80") center/cover;
+  color: white;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+}
+
+.feature-img,
+.course-img,
+.gallery-img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.stat-card {
+  border-left: 5px solid var(--accent);
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.id-card {
+  max-width: 380px;
+}
+
+footer a {
+  color: #d1fae5;
+  text-decoration: none;
+}
