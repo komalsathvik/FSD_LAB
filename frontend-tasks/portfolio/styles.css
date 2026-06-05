@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8fafc;
+  color: #111827;
+}
+
+.hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(17, 24, 39, .72), rgba(17, 24, 39, .72)), url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80") center/cover;
+  color: white;
+}
+
+.profile-photo {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border: 5px solid white;
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+}
+
+.skill-card {
+  border-left: 5px solid #0d6efd;
+}
+
+.timeline-card {
+  border-left: 4px solid #198754;
+}
+
+footer a {
+  color: #bfdbfe;
+  text-decoration: none;
+}

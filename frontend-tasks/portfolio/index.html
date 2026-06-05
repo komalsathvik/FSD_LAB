@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Asha Rao</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#achievements">Achievements</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-md-4 text-center text-md-start">
+          <img class="rounded-circle profile-photo" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80" alt="Profile photo">
+        </div>
+        <div class="col-md-8">
+          <h1 class="display-5 fw-bold">Asha Rao</h1>
+          <p class="lead">Frontend Developer</p>
+          <p>I build responsive, accessible, and clean web interfaces using HTML, CSS, Bootstrap, and JavaScript.</p>
+          <a class="btn btn-primary btn-lg" href="#" download>Download Resume</a>
+          <button class="btn btn-outline-light btn-lg ms-2" data-bs-toggle="modal" data-bs-target="#introModal">Quick Intro</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-5" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="row g-4">
+          <div class="col-md-4"><div class="card h-100"><div class="card-body"><h5>Education</h5><p>B.Tech in Computer Science, Smart College.</p></div></div></div>
+          <div class="col-md-4"><div class="card h-100"><div class="card-body"><h5>Career Objective</h5><p>To grow as a frontend developer by creating useful, user-friendly web applications.</p></div></div></div>
+          <div class="col-md-4"><div class="card h-100"><div class="card-body"><h5>Interests</h5><p>UI design, coding challenges, technical writing, and community learning.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <div class="mb-3"><div class="d-flex justify-content-between"><span>HTML</span><span>90%</span></div><div class="progress"><div class="progress-bar" style="width:90%">90%</div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between"><span>CSS</span><span>85%</span></div><div class="progress"><div class="progress-bar bg-success" style="width:85%">85%</div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between"><span>Bootstrap</span><span>80%</span></div><div class="progress"><div class="progress-bar bg-info" style="width:80%">80%</div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between"><span>JavaScript</span><span>75%</span></div><div class="progress"><div class="progress-bar bg-warning text-dark" style="width:75%">75%</div></div></div>
+          </div>
+          <div class="col-lg-5">
+            <div class="row g-3">
+              <div class="col-sm-6"><div class="card skill-card"><div class="card-body">Responsive Design</div></div></div>
+              <div class="col-sm-6"><div class="card skill-card"><div class="card-body">Bootstrap Components</div></div></div>
+              <div class="col-sm-6"><div class="card skill-card"><div class="card-body">Form Validation</div></div></div>
+              <div class="col-sm-6"><div class="card skill-card"><div class="card-body">GitHub</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3"><div class="card h-100"><div class="card-body"><h5>Student Portal</h5><p>Registration, dashboard, and profile pages.</p><p><span class="badge text-bg-primary">HTML</span> <span class="badge text-bg-success">Bootstrap</span></p><a href="#" class="btn btn-outline-primary">GitHub Link</a></div></div></div>
+          <div class="col-md-6 col-lg-3"><div class="card h-100"><div class="card-body"><h5>Course Portal</h5><p>Course listing and online registration.</p><p><span class="badge text-bg-primary">CSS</span> <span class="badge text-bg-success">Forms</span></p><a href="#" class="btn btn-outline-primary">GitHub Link</a></div></div></div>
+          <div class="col-md-6 col-lg-3"><div class="card h-100"><div class="card-body"><h5>Event System</h5><p>Events, schedule, FAQ, and gallery pages.</p><p><span class="badge text-bg-primary">Tables</span> <span class="badge text-bg-success">Cards</span></p><a href="#" class="btn btn-outline-primary">GitHub Link</a></div></div></div>
+          <div class="col-md-6 col-lg-3"><div class="card h-100"><div class="card-body"><h5>Portfolio</h5><p>Single-page profile with skills and projects.</p><p><span class="badge text-bg-primary">Grid</span> <span class="badge text-bg-success">Modal</span></p><a href="#" class="btn btn-outline-primary">GitHub Link</a></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white" id="achievements">
+      <div class="container">
+        <h2 class="section-title">Achievements</h2>
+        <div class="row g-4">
+          <div class="col-md-3"><div class="card timeline-card h-100"><div class="card-body"><h5>Certifications</h5><p>Bootstrap 5 and JavaScript basics.</p></div></div></div>
+          <div class="col-md-3"><div class="card timeline-card h-100"><div class="card-body"><h5>Workshops</h5><p>Attended UI design and GitHub workshop.</p></div></div></div>
+          <div class="col-md-3"><div class="card timeline-card h-100"><div class="card-body"><h5>Internships</h5><p>Frontend development internship project.</p></div></div></div>
+          <div class="col-md-3"><div class="card timeline-card h-100"><div class="card-body"><h5>Awards</h5><p>Best mini project presentation.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <form class="row g-3">
+          <div class="col-md-6"><label class="form-label">Name</label><input class="form-control" required></div>
+          <div class="col-md-6"><label class="form-label">Email</label><input type="email" class="form-control" required></div>
+          <div class="col-12"><label class="form-label">Subject</label><input class="form-control" required></div>
+          <div class="col-12"><label class="form-label">Message</label><textarea class="form-control" rows="5" required></textarea></div>
+          <div class="col-12"><button class="btn btn-primary">Send Message</button></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <p class="mb-0">&copy; 2026 Asha Rao</p>
+      <div><a href="#">GitHub</a> | <a href="#">LinkedIn</a> | <a href="#">Email</a></div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="introModal" tabindex="-1">
+    <div class="modal-dialog"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Quick Intro</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">I am a frontend learner focused on clean Bootstrap layouts, responsive pages, and practical project work.</div>
+    </div></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
