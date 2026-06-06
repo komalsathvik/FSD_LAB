@@ -1,28 +1,215 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BrightPath Training Institute</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top"><div class="container"><a class="navbar-brand fw-bold" href="index.html">BrightPath</a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="nav"><div class="navbar-nav ms-auto"><a class="nav-link active" href="index.html">Home</a><a class="nav-link" href="courses.html">Courses</a><a class="nav-link" href="about.html">About</a><a class="nav-link" href="contact.html">Contact</a><button class="btn btn-light ms-lg-2" data-bs-toggle="modal" data-bs-target="#login">Login</button></div></div></div></nav>
-  <header class="hero"><div class="container"><div class="col-lg-7"><h1 class="display-5 fw-bold">BrightPath Training Institute</h1><p class="lead">Career-ready technology courses with practical projects, expert faculty, and flexible learning paths.</p><a class="btn btn-warning btn-lg" href="courses.html">Explore Courses</a></div></div></header>
-  <main>
-    <section class="py-5"><div class="container"><h2 class="text-center mb-4">Featured Courses</h2><div class="row g-4">
-      <div class="col-md-6 col-lg-4"><div class="card h-100"><img class="course-img card-img-top" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=80" alt="Web Development"><div class="card-body"><h5>Web Development</h5><p>Duration: 12 weeks</p><p>Fee: ₹18,000</p><button class="btn btn-primary">View Details</button></div></div></div>
-      <div class="col-md-6 col-lg-4"><div class="card h-100"><img class="course-img card-img-top" src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=700&q=80" alt="Python Programming"><div class="card-body"><h5>Python Programming</h5><p>Duration: 10 weeks</p><p>Fee: ₹15,000</p><button class="btn btn-primary">View Details</button></div></div></div>
-      <div class="col-md-6 col-lg-4"><div class="card h-100"><img class="course-img card-img-top" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="Data Science"><div class="card-body"><h5>Data Science</h5><p>Duration: 16 weeks</p><p>Fee: ₹28,000</p><button class="btn btn-primary">View Details</button></div></div></div>
-      <div class="col-md-6 col-lg-4"><div class="card h-100"><img class="course-img card-img-top" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=700&q=80" alt="AI and ML"><div class="card-body"><h5>AI & Machine Learning</h5><p>Duration: 18 weeks</p><p>Fee: ₹32,000</p><button class="btn btn-primary">View Details</button></div></div></div>
-      <div class="col-md-6 col-lg-4"><div class="card h-100"><img class="course-img card-img-top" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=700&q=80" alt="Java Programming"><div class="card-body"><h5>Java Programming</h5><p>Duration: 12 weeks</p><p>Fee: ₹17,000</p><button class="btn btn-primary">View Details</button></div></div></div>
-      <div class="col-md-6 col-lg-4"><div class="card h-100"><img class="course-img card-img-top" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80" alt="Cloud Computing"><div class="card-body"><h5>Cloud Computing</h5><p>Duration: 14 weeks</p><p>Fee: ₹24,000</p><button class="btn btn-primary">View Details</button></div></div></div>
-    </div></div></section>
-    <section class="py-5 bg-white"><div class="container"><h2 class="mb-4">Testimonials</h2><div id="testimonials" class="carousel slide" data-bs-ride="carousel"><div class="carousel-inner"><div class="carousel-item active"><div class="alert alert-primary">"The web development course helped me build real projects." - Riya</div></div><div class="carousel-item"><div class="alert alert-primary">"Faculty explained Python from basics to automation." - Karan</div></div><div class="carousel-item"><div class="alert alert-primary">"Data Science classes were practical and placement focused." - Meera</div></div></div></div></div></section>
-  </main>
-  <footer class="bg-dark text-white py-4"><div class="container row g-3 mx-auto"><div class="col-md-6"><p class="mb-1">42 Learning Street, Pune</p><p class="mb-1">Phone: +91 98765 12340</p><p class="mb-0">Email: info@brightpath.example</p></div><div class="col-md-6 text-md-end"><a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a></div></div></footer>
-  <div class="modal fade" id="login" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5>Login</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><input class="form-control mb-3" placeholder="Email"><input class="form-control" type="password" placeholder="Password"></div><div class="modal-footer"><button class="btn btn-primary">Login</button></div></div></div></div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BrightPath Training Institute</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">BrightPath</a
+        ><button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" href="index.html">Home</a
+            ><a class="nav-link" href="courses.html">Courses</a
+            ><a class="nav-link" href="about.html">About</a
+            ><a class="nav-link" href="contact.html">Contact</a
+            ><button
+              class="btn btn-light ms-lg-2"
+              data-bs-toggle="modal"
+              data-bs-target="#login"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header class="hero">
+      <div class="container">
+        <div class="col-lg-7">
+          <h1 class="display-5 fw-bold">BrightPath Training Institute</h1>
+          <p class="lead">
+            Career-ready technology courses with practical projects, expert
+            faculty, and flexible learning paths.
+          </p>
+          <a class="btn btn-warning btn-lg" href="courses.html"
+            >Explore Courses</a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Featured Courses</h2>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img
+                  class="course-img card-img-top"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=80"
+                  alt="Web Development"
+                />
+                <div class="card-body">
+                  <h5>Web Development</h5>
+                  <p>Duration: 12 weeks</p>
+                  <p>Fee: ₹18,000</p>
+                  <button class="btn btn-primary">View Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img
+                  class="course-img card-img-top"
+                  src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=700&q=80"
+                  alt="Python Programming"
+                />
+                <div class="card-body">
+                  <h5>Python Programming</h5>
+                  <p>Duration: 10 weeks</p>
+                  <p>Fee: ₹15,000</p>
+                  <button class="btn btn-primary">View Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img
+                  class="course-img card-img-top"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80"
+                  alt="Data Science"
+                />
+                <div class="card-body">
+                  <h5>Data Science</h5>
+                  <p>Duration: 16 weeks</p>
+                  <p>Fee: ₹28,000</p>
+                  <button class="btn btn-primary">View Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img
+                  class="course-img card-img-top"
+                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=700&q=80"
+                  alt="AI and ML"
+                />
+                <div class="card-body">
+                  <h5>AI & Machine Learning</h5>
+                  <p>Duration: 18 weeks</p>
+                  <p>Fee: ₹32,000</p>
+                  <button class="btn btn-primary">View Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img
+                  class="course-img card-img-top"
+                  src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=700&q=80"
+                  alt="Java Programming"
+                />
+                <div class="card-body">
+                  <h5>Java Programming</h5>
+                  <p>Duration: 12 weeks</p>
+                  <p>Fee: ₹17,000</p>
+                  <button class="btn btn-primary">View Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                <img
+                  class="course-img card-img-top"
+                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80"
+                  alt="Cloud Computing"
+                />
+                <div class="card-body">
+                  <h5>Cloud Computing</h5>
+                  <p>Duration: 14 weeks</p>
+                  <p>Fee: ₹24,000</p>
+                  <button class="btn btn-primary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-5 bg-white">
+        <div class="container">
+          <h2 class="mb-4">Testimonials</h2>
+          <div id="testimonials" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="alert alert-primary">
+                  "The web development course helped me build real projects." -
+                  Riya
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="alert alert-primary">
+                  "Faculty explained Python from basics to automation." - Karan
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="alert alert-primary">
+                  "Data Science classes were practical and placement focused." -
+                  Meera
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-dark text-white py-4">
+      <div class="container row g-3 mx-auto">
+        <div class="col-md-6">
+          <p class="mb-1">42 Learning Street, Pune</p>
+          <p class="mb-1">Phone: +91 98765 12340</p>
+          <p class="mb-0">Email: info@brightpath.example</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+    <div class="modal fade" id="login" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5>Login</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <input class="form-control mb-3" placeholder="Email" /><input
+              class="form-control"
+              type="password"
+              placeholder="Password"
+            />
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
