@@ -1,0 +1,13 @@
+{
+  "name": "express-practice",
+  "version": "1.0.0",
+  "description": "Basic Express practice app with GET, POST, and middleware examples.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
