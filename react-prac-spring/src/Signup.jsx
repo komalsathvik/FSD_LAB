@@ -1,34 +1,28 @@
 import { useState } from "react";
 import axios from "axios";
-function Login() {
+function Signup() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
-  const [data, setData] = useState("");
-  const handleSubmit = async (event) => {
+
+  const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(name);
-    console.log(password);
-    try {
-      const res = await axios.post("http://localhost:9000/login", {
+    axios
+      .post("http://localhost:9000/signup", {
         username: name,
         password: password,
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
       });
-      console.log(res);
-      console.log(res.data.success);
-      if (res.data.success == true) {
-        console.log("true");
-        window.location.href = "/";
-      } else {
-        setData("incorrect password");
-      }
-    } catch (err) {
-      console.log(err);
-    }
   };
+
   return (
     <div className="container">
       <div style={{ maxWidth: 380, margin: "40px auto", padding: 16 }}>
-        <h1>Login</h1>
+        <h1>Create New Account</h1>
         <form onSubmit={handleSubmit}>
           <div style={{ marginBottom: 12 }}>
             <label htmlFor="name">User name</label>
@@ -57,14 +51,12 @@ function Login() {
           </div>
 
           <button type="submit" style={{ padding: "10px 14px" }}>
-            Login
+            Sign In
           </button>
-          <br></br>
-          <p style={{ color: "red" }}>{data}</p>
         </form>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Signup;
