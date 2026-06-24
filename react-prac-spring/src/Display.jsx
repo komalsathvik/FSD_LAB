@@ -1,5 +1,10 @@
 import React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import StudentForm from "./StudentForm";
+import StudentSearch from "./StudentSearch";
+import StudentTable from "./StudentTable";
+
 let stud = [
   {
     name: "Rahul",
@@ -33,6 +38,7 @@ let stud = [
   },
 ];
 function Display() {
+  const location = useLocation();
   let [students, setStudents] = useState(stud);
   let [editIndex, setEditIndex] = useState(null);
   let [search, setSearch] = useState("");
@@ -66,106 +72,37 @@ function Display() {
     setFormData({ name: "", rollNo: "", branch: "" });
   }
 
-  const filterStudents = students.filter((s) =>
-    s.name.toLowerCase().includes(search.toLowerCase()),
-  );
+  useEffect(() => {
+    if (location.hash) {
+      document.querySelector(location.hash)?.scrollIntoView();
+    }
+  }, [location]);
+
+  const filterStudents = students
+    .map((student, index) => ({ ...student, originalIndex: index }))
+    .filter((s) => s.name.toLowerCase().includes(search.toLowerCase()));
   const sortedStudents = [...filterStudents].sort((a, b) =>
-    ascending ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name),
+    ascending
+      ? a.name.localeCompare(b.name)
+      : b.name.toLowerCase().localeCompare(a.name.toLowerCase()),
   );
   return (
-    <div>
-      <input
-        className="form-control"
-        name="search"
-        value={search}
-        placeholder="type to search"
-        onChange={(e) => setSearch(e.target.value)}
-      ></input>
-      <h2>{editIndex == null ? "Add Student" : "Edit Student"}</h2>
-      <div className="form">
-        <input
-          className="form-control m-2"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="enter name"
-        ></input>
-        <input
-          className="form-control m-2"
-          name="rollNo"
-          value={formData.rollNo}
-          onChange={handleChange}
-          placeholder="enter roll no"
-        ></input>
-        <input
-          className="form-control m-2"
-          name="branch"
-          value={formData.branch}
-          onChange={handleChange}
-          placeholder="enter branch"
-        ></input>
-        {editIndex == null ? (
-          <button className="btn btn-primary m-2" onClick={() => handleAdd()}>
-            Add Student
-          </button>
-        ) : (
-          <button
-            className="btn btn-primary m-2"
-            onClick={() => handleUpdate()}
-          >
-            Update Student
-          </button>
-        )}
-      </div>
-      <div>
-        <h2>All Students</h2>
-        <table
-          className="table table-bordered"
-          border="2"
-          cellPadding="10"
-          cellSpacing="0"
-        >
-          <thead>
-            <tr>
-              <th
-                style={{ cursor: "pointer" }}
-                onClick={() => setAscending(!ascending)}
-              >
-                Name {ascending ? "▲" : "▼"}
-              </th>
-              <th>Roll No</th>
-              <th>Branch</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {sortedStudents.map((student, index) => (
-              <tr key={student.id}>
-                <td>{student.name}</td>
-                <td>{student.rollNo}</td>
-                <td>{student.branch}</td>
-                <td>
-                  <button
-                    className="btn btn-primary"
-                    onClick={() => handleEdit(index)}
-                    style={{ marginRight: "10px" }}
-                  >
-                    Edit
-                  </button>
-
-                  <button
-                    className="btn btn-danger"
-                    onClick={() => handleDelete(index)}
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+    <div className="container mt-4">
+      <StudentSearch search={search} setSearch={setSearch} />
+      <StudentForm
+        editIndex={editIndex}
+        formData={formData}
+        handleChange={handleChange}
+        handleAdd={handleAdd}
+        handleUpdate={handleUpdate}
+      />
+      <StudentTable
+        sortedStudents={sortedStudents}
+        ascending={ascending}
+        setAscending={setAscending}
+        handleEdit={handleEdit}
+        handleDelete={handleDelete}
+      />
     </div>
   );
 }
