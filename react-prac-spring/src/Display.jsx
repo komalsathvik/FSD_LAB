@@ -36,6 +36,7 @@ function Display() {
   let [students, setStudents] = useState(stud);
   let [editIndex, setEditIndex] = useState(null);
   let [search, setSearch] = useState("");
+  let [ascending, setAscending] = useState(true);
   const [formData, setFormData] = useState({
     name: "",
     rollNo: "",
@@ -67,6 +68,9 @@ function Display() {
 
   const filterStudents = students.filter((s) =>
     s.name.toLowerCase().includes(search.toLowerCase()),
+  );
+  const sortedStudents = [...filterStudents].sort((a, b) =>
+    ascending ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name),
   );
   return (
     <div>
@@ -123,7 +127,12 @@ function Display() {
         >
           <thead>
             <tr>
-              <th>Name</th>
+              <th
+                style={{ cursor: "pointer" }}
+                onClick={() => setAscending(!ascending)}
+              >
+                Name {ascending ? "▲" : "▼"}
+              </th>
               <th>Roll No</th>
               <th>Branch</th>
               <th>Actions</th>
@@ -131,7 +140,7 @@ function Display() {
           </thead>
 
           <tbody>
-            {filterStudents.map((student, index) => (
+            {sortedStudents.map((student, index) => (
               <tr key={student.id}>
                 <td>{student.name}</td>
                 <td>{student.rollNo}</td>
