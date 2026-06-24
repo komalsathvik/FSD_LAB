@@ -9,7 +9,7 @@ app.use(cors());
 function initDB() {
   mongoose
     .connect("mongodb://127.0.0.1:27017/react-prac")
-    .then(() => {
+    .then(() => { 
       console.log("DB connected");
     })
     .catch((err) => {
@@ -17,22 +17,22 @@ function initDB() {
     });
 }
 app.get("/", (req, res) => {
-  res.json({ message: "get request" });
+  res.json({ message  : "get request" });
 });
 
 app.post("/signup", (req, res) => {
   const name = req.body.username;
-  const pass = req.body.password;
+  const pass = req.body.password; 
   const newUser = User.create({
     username: name,
     password: pass,
-  });
+  }); 
   res.status(201).json({ message: "inserted into db succesfully" });
 });
 
 app.post("/login", async (req, res) => {
   const name = req.body.username;
-  const pass = req.body.password;
+  const pass = refq.body.password;
   const user = await User.findOne({ username: name });
   console.log(user);
   if (pass === user.password) {
@@ -42,7 +42,9 @@ app.post("/login", async (req, res) => {
   }
 });
 
+
+
 app.listen(PORT, () => {
   initDB();
   console.log(`server is running on PORT ${PORT}`);
-});
+}); 
