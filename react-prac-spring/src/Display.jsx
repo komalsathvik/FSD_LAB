@@ -34,12 +34,17 @@ let stud = [
 ];
 function Display() {
   let [students, setStudents] = useState(stud);
+  let [editIndex, setEditIndex] = useState(null);
+  let [search, setSearch] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     rollNo: "",
     branch: "",
   });
-  function handleEdit(index) {}
+  function handleEdit(index) {
+    setEditIndex(index);
+    setFormData(students[index]);
+  }
   function handleAdd() {
     setStudents([...students, formData]);
     setFormData({ name: "", rollNo: "", branch: "" });
@@ -51,9 +56,28 @@ function Display() {
     const updatedStudents = students.filter((s, index) => index != i);
     setStudents(updatedStudents);
   }
+  function handleUpdate() {
+    const updatedStudents = students.map((s, index) =>
+      index == editIndex ? formData : s,
+    );
+    setStudents(updatedStudents);
+    setEditIndex(null);
+    setFormData({ name: "", rollNo: "", branch: "" });
+  }
+
+  const filterStudents = students.filter((s) =>
+    s.name.toLowerCase().includes(search.toLowerCase()),
+  );
   return (
     <div>
-      <h2>Add new Student</h2>
+      <input
+        className="form-control"
+        name="search"
+        value={search}
+        placeholder="type to search"
+        onChange={(e) => setSearch(e.target.value)}
+      ></input>
+      <h2>{editIndex == null ? "Add Student" : "Edit Student"}</h2>
       <div className="form">
         <input
           className="form-control m-2"
@@ -76,9 +100,18 @@ function Display() {
           onChange={handleChange}
           placeholder="enter branch"
         ></input>
-        <button className="btn btn-primary m-2" onClick={() => handleAdd()}>
-          Add Student
-        </button>
+        {editIndex == null ? (
+          <button className="btn btn-primary m-2" onClick={() => handleAdd()}>
+            Add Student
+          </button>
+        ) : (
+          <button
+            className="btn btn-primary m-2"
+            onClick={() => handleUpdate()}
+          >
+            Update Student
+          </button>
+        )}
       </div>
       <div>
         <h2>All Students</h2>
@@ -98,7 +131,7 @@ function Display() {
           </thead>
 
           <tbody>
-            {students.map((student, index) => (
+            {filterStudents.map((student, index) => (
               <tr key={student.id}>
                 <td>{student.name}</td>
                 <td>{student.rollNo}</td>
